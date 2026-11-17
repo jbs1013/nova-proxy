@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Proxy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-icon">N</span>
+      <span>Nova <b>Proxy</b></span>
+    </div>
+
+    <div class="header-buttons">
+      <button onclick="addTab()">＋ New Tab</button>
+      <button onclick="toggleTheme()">☾</button>
+    </div>
+  </header>
+
+  <div class="tabs" id="tabs">
+    <button class="tab active" onclick="showHome()">Home</button>
+  </div>
+
+  <main>
+    <section class="home-screen" id="homeScreen">
+
+      <div class="hero">
+        <div class="big-logo">N</div>
+        <h1>Welcome to <span>Nova</span></h1>
+        <p>Your web experience, your way.</p>
+      </div>
+
+      <form class="search-box" id="searchForm">
+        <span>⌕</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search Google or enter a website..."
+          autocomplete="off"
+        >
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+
+        <div class="link-grid">
+          <a href="https://www.google.com" target="_blank">🔍<span>Google</span></a>
+          <a href="https://www.youtube.com" target="_blank">▶️<span>YouTube</span></a>
+          <a href="https://www.wikipedia.org" target="_blank">🌐<span>Wikipedia</span></a>
+          <a href="https://www.github.com" target="_blank">💻<span>GitHub</span></a>
+          <a href="https://www.coolmathgames.com" target="_blank">🎮<span>Games</span></a>
+          <a href="https://www.reddit.com" target="_blank">💬<span>Reddit</span></a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2>Welcome to Nova</h2>
+        <p>A clean, customizable browser-style homepage.</p>
+      </div>
+
+    </section>
+
+    <section class="browser-screen" id="browserScreen">
+      <div class="browser-toolbar">
+        <button onclick="goBack()">←</button>
+        <button onclick="showHome()">⌂</button>
+        <div class="address-box">
+          <input id="addressInput" placeholder="Enter website address">
+          <button onclick="navigateAddress()">Go</button>
+        </div>
+      </div>
+      <div class="browser-message">
+        <h2>Open websites in a new tab</h2>
+        <p>Nova's homepage can launch websites in your browser.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Nova Proxy · Version 1.0</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
